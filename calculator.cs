@@ -1,28 +1,29 @@
-double Sum(double a, double b) // метод выполняет сумму введенных чисел
+double Sum(double a, double b) // РјРµС‚РѕРґ РєРѕС‚РѕСЂС‹Р№ СЃСѓРјРјРёСЂСѓРµС‚ С‡РёСЃР»Р°
 {
     double sum = a + b;
-    Console.WriteLine($"Ответ: {sum}");
+    Console.WriteLine($"РћС‚РІРµС‚: {sum}");
     return sum;
 }
-double Minus(double a, double b) // метод выполняет разность введенных чисел
+double Minus(double a, double b) // РјРµС‚РѕРґ РєРѕС‚РѕСЂС‹Р№ РІС‹С‡РёС‚Р°РµС‚ С‡РёСЃР»Р°
 {
     double minus = a - b;
-    Console.WriteLine($"Ответ: {minus}");
+    Console.WriteLine($"РћС‚РІРµС‚: {minus}");
     return minus;
 }
-double Umn(double a, double b) // метод выполняет умножение введенных чисел
+double Umn(double a, double b) //РјРµС‚РѕРґ РєРѕС‚РѕСЂС‹Р№ СѓРјРЅРѕР¶Р°РµС‚ С‡РёСЃР»Р°
 {
     double umn = a * b;
-    Console.WriteLine($"Ответ: {umn}");
+    Console.WriteLine($"РћС‚РІРµС‚: {umn}");
     return umn;
 }
-double Dele(double a, double b) // метод выполняет деление введенных чисел
+double Dele(double a, double b) // РјРµС‚РѕРґ РєРѕС‚РѕСЂС‹Р№ РґРµР»РёС‚ С‡РёСЃР»Р°
 {
+    
     double dele = a / b;
-    Console.WriteLine($"Ответ: {dele}");
+    Console.WriteLine($"РћС‚РІРµС‚: {dele}");
     return dele;
 }
-double ValidInput(string input) // эта функция используются для того, чтобы проверить корректно ли введены данные
+double ValidInput(string input) // СЌС‚Рѕ С„СѓРЅРєС†РёСЏ РЅСѓР¶РЅР° РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РїСЂРѕРІРµСЂСЏС‚СЊ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РІРІРѕРґР° РґР°РЅРЅС‹С…
 {
     Console.WriteLine(input);
     while (true)
@@ -31,57 +32,57 @@ double ValidInput(string input) // эта функция используются для того, чтобы пров
         {
             return number;
         }
-        Console.WriteLine("Введите число!");
+        Console.WriteLine("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ!");
     }
 }
-Console.WriteLine("Добро пожаловать в калькулятор :)");
+Console.WriteLine("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ РїСЂРѕСЃС‚РѕР№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ :)");
 while (true)
 {
-    Console.WriteLine("Выберете один из пунктов: ");
-    Console.WriteLine("1.Сумма");
-    Console.WriteLine("2.Вычитание");
-    Console.WriteLine("3.Умножение");
-    Console.WriteLine("4.Деление");
-    Console.WriteLine("5.Выход");
+    Console.WriteLine("Р’С‹Р±РµСЂРµС‚Рµ С†РёС„СЂСѓ: ");
+    Console.WriteLine("1.РЎСѓРјРјР°");
+    Console.WriteLine("2.Р Р°Р·РЅРѕСЃС‚СЊ");
+    Console.WriteLine("3.РЈРјРЅРѕР¶РµРЅРёРµ");
+    Console.WriteLine("4.Р”РµР»РµРЅРёРµ");
+    Console.WriteLine("5.Р’С‹С…РѕРґ");
     int a = int.Parse(Console.ReadLine());
     if (a == 5)
     {
-        Console.WriteLine("Программа завершила работу -_- ");
+        Console.WriteLine("РџСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РёР»Р° СЂР°Р±РѕС‚Сѓ -_- ");
         break;
     }
-    switch (a) // вместо того чтобы писать много if-else, лучше прописать switch он удобнее  именно в таких случаях
+    switch (a) 
     {
         case 1:
-            Console.WriteLine("Вы выбрали сумму: ");
-            double inputOneSum = ValidInput("Введите первое число: ");
-            double inputTwoSum = ValidInput("Введите второе число: ");
+            Console.WriteLine("Р’С‹ РІС‹Р±СЂР°Р»Рё СЃСѓРјРјСѓ: ");
+            double inputOneSum = ValidInput("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
+            double inputTwoSum = ValidInput("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
             Sum(inputOneSum, inputTwoSum);
-            Console.WriteLine(); // добавил что было расстояние между ответом и меню
             break;
         case 2:
-            Console.WriteLine("Вы выбрали разность: ");
-            double oneNumberMinus = ValidInput("Введите первое число: ");
-            double twoNumberMinus = ValidInput("Введите второе число: ");
+            Console.WriteLine("Р’С‹ РІС‹Р±СЂР°Р»Рё СЂР°Р·РЅРѕСЃС‚СЊ: ");
+            double oneNumberMinus = ValidInput("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
+            double twoNumberMinus = ValidInput("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
             Minus(oneNumberMinus, twoNumberMinus);
-            Console.WriteLine();
             break;
         case 3:
-            Console.WriteLine("Вы выбрали умножение: ");
-            double oneNumberUmn = ValidInput("Введите первое число: ");
-            double twoNumberUmn = ValidInput("Введите второе число: ");
+            Console.WriteLine("Р’С‹ РІС‹Р±СЂР°Р»Рё СѓРјРЅРѕР¶РµРЅРёРµ: ");
+            double oneNumberUmn = ValidInput("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
+            double twoNumberUmn = ValidInput("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
             Umn(oneNumberUmn, twoNumberUmn);
-            Console.WriteLine();
             break;
         case 4:
-            Console.WriteLine("Вы выбрали деление: ");
-            double oneNumberDele = ValidInput("Введите первое число: ");
-            double twoNumberDele = ValidInput("Введите второе число: ");
+            Console.WriteLine("Р’С‹ РІС‹Р±СЂР°Р»Рё РґРµР»РµРЅРёРµ: ");
+            double oneNumberDele = ValidInput("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
+            double twoNumberDele =ValidInput("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
+            if(twoNumberDele==0)
+            {
+                Console.WriteLine("РќР° РЅРѕР»СЊ РґРµР»РёС‚СЊ РЅРµР»СЊР·СЏ!");
+                break;
+            }
             Dele(oneNumberDele, twoNumberDele);
-            Console.WriteLine();
             break;
         default:
-            Console.WriteLine("Ошибка, выберете один из пунктов ещё раз");
-            Console.WriteLine();
+            Console.WriteLine("РћС€РёР±РєР°, РІС‹Р±РµСЂРµС‚Рµ С‡РёСЃР»Рѕ РµС‰С‘ СЂР°Р·!");
             break;
     }
 }
